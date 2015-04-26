@@ -28,5 +28,9 @@ module.exports = StyleSheet.create({
   listView: {
     paddingTop: 20,
     backgroundColor: '#F5FCFF'
-  }
+  },
+  map: {
+    height: 300,
+    marginTop: 20,
+  },
 });

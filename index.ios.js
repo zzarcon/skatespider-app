@@ -1,7 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
 'use strict';
 
 var React = require('react-native');
@@ -24,7 +20,7 @@ var skatespider = React.createClass({
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
       }),
-      selectedTab: 'spotList'
+      selectedTab: 'map'
     };
   },
 
@@ -38,12 +34,11 @@ var skatespider = React.createClass({
     });
   },
 
-  renderMap: function(color: string, pageText: string) {
+  renderMap: function() {
     return (
-      <View style={[styles.tabContent, {backgroundColor: color}]}>
-        <Text style={styles.tabText}>{pageText}</Text>
-        <Text style={styles.tabText}>{this.state.presses} re-renders of the More tab</Text>
-      </View>
+      <MapView
+        style={styles.map}
+      />
     );
   },
 
